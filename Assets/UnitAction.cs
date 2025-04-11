@@ -1,14 +1,22 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEditor.Timeline;
 using UnityEngine;
 
 public class UnitAction : MonoBehaviour
 {
+    [Header("Don't touch!")]
     [SerializeField] Vector2 sceneSize;
-    [SerializeField] float[] mDirProb = new float[4];
     [SerializeField] float moveStep = 1;
+    [SerializeField] GameObject attackCone;
+
+    [Header("Probabilities")]
+    public float[] mDirProb = new float[4];
+    public float attackProb = 25;
+    
 
     bool canMoveAction = true;
+    bool canAttackAction = false;
 
     Vector3 moveDir = Vector3.zero;
     Vector3 moveStartPos = Vector3.zero;
@@ -18,8 +26,15 @@ public class UnitAction : MonoBehaviour
         if (canMoveAction)
         {
             moveDir = RandomMoveAction();
-            StartCoroutine(MoveActionCooldown());
             moveStartPos = transform.position;
+
+            StartCoroutine(MoveActionCooldown());
+            StartCoroutine(AttackActionCooldown());
+        }
+        
+        if (canAttackAction)
+        {
+            RandomFightAction();
         }
 
         MoveUnit(moveDir);
@@ -54,7 +69,33 @@ public class UnitAction : MonoBehaviour
 
     void RandomFightAction()
     {
+        float zRot = 0;
 
+        if (moveDir.y == 1)
+        {
+            zRot = 0;
+        }
+
+        else if (moveDir.x == 1)
+        {
+            zRot = -90;
+        }
+
+        else if (moveDir.y == -1)
+        {
+            zRot = -180;
+        }
+
+        else
+        {
+            zRot = -270;
+        }
+
+        if (Random.Range(0, 100) < attackProb)
+        {
+            GameObject tmp = Instantiate(attackCone, transform.position, Quaternion.Euler(new Vector3(0, 0, zRot)));
+            Destroy(tmp, 0.2f);
+        }
     }
 
     void MoveUnit(Vector3 translation)
@@ -73,7 +114,15 @@ public class UnitAction : MonoBehaviour
     IEnumerator MoveActionCooldown()
     {
         canMoveAction = false;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.6f);
         canMoveAction = true;
+    }
+
+    IEnumerator AttackActionCooldown()
+    {
+        yield return new WaitForSeconds(0.5f);
+        canAttackAction = true;
+        yield return new WaitForNextFrameUnit();
+        canAttackAction = false;
     }
 }
