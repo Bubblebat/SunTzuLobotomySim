@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      clashroyale_0: -429389140085291585
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

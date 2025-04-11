@@ -298,7 +298,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      profileiconchinese_0: -3661797285432785678
+      profileiconchinese_1: -607513601194237208
+      profileiconchinese_2: 8759816826842562929
+      profileiconchinese_3: 7421944405735596346
+      profileiconchinese_4: 1641038607650608340
+      profileiconchinese_5: 2486518714647637114
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

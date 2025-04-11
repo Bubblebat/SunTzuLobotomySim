@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ChineseSoldierBehind_0: -2209120513685781482
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
