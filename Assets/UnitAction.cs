@@ -1,15 +1,14 @@
 using System.Collections;
+using UnityEditor.Timeline;
 using UnityEngine;
 
 public class UnitAction : MonoBehaviour
 {
     [SerializeField] Vector2 sceneSize;
-
-    [SerializeField] bool canMoveAction = true;
-
     [SerializeField] float[] mDirProb = new float[4];
-
     [SerializeField] float moveStep = 1;
+
+    bool canMoveAction = true;
 
     Vector3 moveDir = Vector3.zero;
     Vector3 moveStartPos = Vector3.zero;
@@ -28,24 +27,24 @@ public class UnitAction : MonoBehaviour
 
     Vector3 RandomMoveAction()
     {
-        float rVal = Mathf.RoundToInt(Random.Range(0, 4));
+        float rVal = Mathf.RoundToInt(Random.Range(0, mDirProb[0] + mDirProb[1] + mDirProb[2] + mDirProb[3]));
 
-        if (rVal == 0)
+        if (rVal < mDirProb[0])
         {
             moveDir = new Vector3(0,1);
         }
 
-        else if (rVal == 1)
+        else if (rVal < mDirProb[0] + mDirProb[1])
         {
             moveDir = new Vector3(1, 0);
         }
 
-        else if (rVal == 2)
+        else if (rVal < mDirProb[0] + mDirProb[1] + mDirProb[2])
         {
             moveDir = new Vector3(0, -1);
         }
 
-        else if (rVal == 3)
+        else
         {
             moveDir = new Vector3(-1, 0);
         }
