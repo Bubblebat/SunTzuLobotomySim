@@ -183,7 +183,10 @@ public class UnitAction : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
-            //Add something so you can drop item on death or smth
+            if (transform.CompareTag("E"))
+            {
+                GameObject.FindGameObjectWithTag("PointCounter").GetComponent<ScoreStorage>().points += Random.Range(3, 6);
+            }
         }
     }
 }
