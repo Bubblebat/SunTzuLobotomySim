@@ -2,6 +2,10 @@ using UnityEngine;
 
 public class CardScript : MonoBehaviour
 {
+    [Header("Card sprites")]
+    public Sprite inPlaySprite;
+    public Sprite flippedSprite;
+
     [Header("Is in use")]
     public bool isActive = false;
     public bool flippedUp = false;
@@ -20,4 +24,24 @@ public class CardScript : MonoBehaviour
     [Header("Probabilities")]
     public float[] mDirProb = new float[4];
     public float attackProb = 25;
+
+    private void Start()
+    {
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+
+        spriteRenderer.sprite = flippedSprite;
+    }
+
+    private void FixedUpdate()
+    {
+        if (isActive)
+        {
+            transform.GetChild(0).gameObject.SetActive(true);
+        }
+
+        else
+        {
+            transform.GetChild(0).gameObject.SetActive(false);
+        }
+    }
 }

@@ -106,14 +106,16 @@ MonoBehaviour:
   healthMult: 1
   attackDmg: 3
   attackMult: 1
+  actionCooldown: 0.6
+  actionMult: 1
+  moveStep: 6
   mDirProb:
   - 0
   - 40
   - 0
   - 40
   attackProb: 10
-  sceneSize: {x: 8.5, y: 4.5}
-  moveStep: 0
+  sceneSize: {x: 6.4, y: 4.5}
   attackCone: {fileID: 409162808156746367, guid: d9536889cabfbd3488d86e3ab44afca2, type: 3}
 --- !u!61 &7634025928352915939
 BoxCollider2D:

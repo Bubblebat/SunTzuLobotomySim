@@ -14,16 +14,18 @@ public class Activatecards : MonoBehaviour
         {
             RaycastHit2D hit = Physics2D.Raycast(pos, transform.forward, Mathf.Infinity, mask);
 
-            if (hit && hit.transform.GetComponent<CardScript>().flippedUp)
+            CardScript cardScript = hit.transform.GetComponent<CardScript>();
+
+            if (hit && cardScript.flippedUp)
             {
-                if (hit.transform.GetComponent<CardScript>().isActive)
+                if (cardScript.isActive)
                 {
-                    hit.transform.GetComponent<CardScript>().isActive = false;
+                    cardScript.isActive = false;
                 }
                 
                 else
                 {
-                    hit.transform.GetComponent<CardScript>().isActive = true;
+                    cardScript.isActive = true;
                 }
             }
         }
