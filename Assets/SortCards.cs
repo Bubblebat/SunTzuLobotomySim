@@ -21,6 +21,9 @@ public class SortCards : MonoBehaviour
         {
             transform.GetChild(i).GetComponent<CardScript>().flippedUp = true;
             transform.GetChild(i).position = PosList.GetChild(i).position;
+            transform.GetChild(i).GetComponent<SpriteRenderer>().sortingOrder = 5;
+            transform.GetChild(i).GetComponent<SpriteRenderer>().sprite = transform.GetChild(i).GetComponent<CardScript>().inPlaySprite;
+            transform.GetChild(i).GetComponent<BoxCollider2D>().enabled = true;
         }
 
         if (transform.childCount > 5)
@@ -28,6 +31,8 @@ public class SortCards : MonoBehaviour
             for (int i = 5; i < transform.childCount; i++)
             {
                 transform.GetChild(i).position = PosList.GetChild(5).position;
+                transform.GetChild(i).GetComponent<SpriteRenderer>().sortingOrder = 4;
+                transform.GetChild(i).GetComponent<BoxCollider2D>().enabled = false;
             }
             lastSize = transform.childCount;
         }

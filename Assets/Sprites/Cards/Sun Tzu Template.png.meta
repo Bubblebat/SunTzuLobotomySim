@@ -198,7 +198,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Sun Tzu Template_0: 5538631047249080978
+      Sun Tzu Template_1: 8420449328517134188
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

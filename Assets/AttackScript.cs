@@ -10,10 +10,8 @@ public class AttackScript : MonoBehaviour
     {
         attackDmg = transform.parent.GetComponent<UnitAction>().attackDmg;
 
-        Debug.Log("Action");
         if (other.transform.gameObject.CompareTag(EnemyTag))
         {
-            Debug.Log("Camera");
             other.GetComponent<UnitAction>().health -= attackDmg;
         }
     }
