@@ -2,24 +2,45 @@ using System.Collections;
 using Unity.VisualScripting;
 using UnityEditor.Timeline;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UnitAction : MonoBehaviour
 {
-    [Header("Don't touch!")]
-    [SerializeField] Vector2 sceneSize;
-    [SerializeField] float moveStep = 1;
-    [SerializeField] GameObject attackCone;
+    public float health = 2;
+
+    [Header("Hp and Attack dmg")]
+    public float maxHealth = 10;
+    public float healthMult = 1;
+    public float attackDmg = 3;
+    public float attackMult = 1;
+
+    [Header("ActionModifiers")]
+    public float actionCooldown = 0.6f;
+    public float actionMult = 1f;
+    public float moveStep = 8;
 
     [Header("Probabilities")]
     public float[] mDirProb = new float[4];
     public float attackProb = 25;
-    
+
+    [Header("Don't touch!")]
+    [SerializeField] Vector2 sceneSize;
+    [SerializeField] GameObject attackCone;
 
     bool canMoveAction = true;
     bool canAttackAction = false;
 
     Vector3 moveDir = Vector3.zero;
     Vector3 moveStartPos = Vector3.zero;
+
+    private void Start()
+    {
+        maxHealth *= healthMult;
+        attackDmg *= attackMult;
+        actionCooldown /= actionMult;
+
+        health = maxHealth;
+    }
 
     private void Update()
     {
@@ -38,6 +59,8 @@ public class UnitAction : MonoBehaviour
         }
 
         MoveUnit(moveDir);
+
+        Die();
     }
 
     Vector3 RandomMoveAction()
@@ -93,7 +116,7 @@ public class UnitAction : MonoBehaviour
 
         if (Random.Range(0, 100) < attackProb)
         {
-            GameObject tmp = Instantiate(attackCone, transform.position, Quaternion.Euler(new Vector3(0, 0, zRot)));
+            GameObject tmp = Instantiate(attackCone, transform.position, Quaternion.Euler(new Vector3(0, 0, zRot)), transform);
             Destroy(tmp, 0.2f);
         }
     }
@@ -114,15 +137,24 @@ public class UnitAction : MonoBehaviour
     IEnumerator MoveActionCooldown()
     {
         canMoveAction = false;
-        yield return new WaitForSeconds(0.6f);
+        yield return new WaitForSeconds(Mathf.Clamp(actionCooldown, 0.2f, 2f));
         canMoveAction = true;
     }
 
     IEnumerator AttackActionCooldown()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(Mathf.Clamp(actionCooldown - 0.1f, 0.1f, 2f - 0.1f));
         canAttackAction = true;
         yield return new WaitForNextFrameUnit();
         canAttackAction = false;
+    }
+
+    void Die()
+    {
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+            //Add something so you can drop item on death or smth
+        }
     }
 }

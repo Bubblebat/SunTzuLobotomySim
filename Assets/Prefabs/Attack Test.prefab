@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 7440891623861053586}
   - component: {fileID: 4784801293927202539}
   - component: {fileID: 8700649404457268084}
+  - component: {fileID: 2431626509717138356}
+  - component: {fileID: -6886199763717213095}
   m_Layer: 0
   m_Name: Attack Test
   m_TagString: Untagged
@@ -28,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.45, y: 5.35, z: 0}
-  m_LocalScale: {x: 0.43, y: 0.43, z: 0.43}
+  m_LocalScale: {x: 1.03, y: 1.03, z: 1.03}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -135,6 +137,46 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: -0.0077790357, y: -0.56016874}
-      - {x: -1.2495455, y: 1.6486018}
-      - {x: 1.2484282, y: 1.622636}
+      - {x: -0.84154934, y: 1.4310038}
+      - {x: 0.8676315, y: 1.432238}
   m_UseDelaunayMesh: 0
+--- !u!114 &2431626509717138356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498792293601408391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26a1d387d1ce2524e8cc41826886a761, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyTag: E
+--- !u!50 &-6886199763717213095
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498792293601408391}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
