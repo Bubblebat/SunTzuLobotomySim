@@ -8,6 +8,7 @@ public class DisplayPoints : MonoBehaviour
 
     private void FixedUpdate()
     {
+        score = GameObject.FindGameObjectWithTag("PointCounter").GetComponent<ScoreStorage>().points;
         text1.text = ": " + score;
     }
 }

@@ -182,11 +182,14 @@ public class UnitAction : MonoBehaviour
     {
         if (health <= 0)
         {
-            Destroy(gameObject);
             if (transform.CompareTag("E"))
             {
                 GameObject.FindGameObjectWithTag("PointCounter").GetComponent<ScoreStorage>().points += Random.Range(3, 6);
+                transform.GetComponent<CasOpening>().openCase = true;
+                transform.GetComponent<CasOpening>().itemChance = 0.6f;
+                Debug.Log("Bruh");
             }
+            Destroy(gameObject, 0.05f);
         }
     }
 }

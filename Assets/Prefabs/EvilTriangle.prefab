@@ -153,6 +153,7 @@ GameObject:
   - component: {fileID: 1025912007727902608}
   - component: {fileID: 3067909809019358999}
   - component: {fileID: 7634025928352915939}
+  - component: {fileID: -8040002012679236008}
   m_Layer: 0
   m_Name: EvilTriangle
   m_TagString: E
@@ -319,6 +320,36 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-8040002012679236008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6201114039046740781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd461bbea127a1b4fb30a876e95a796d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attributeCards:
+  - {fileID: 6847259045586407702, guid: 339b99fb23bd5dd47bc09e1b9c031a54, type: 3}
+  - {fileID: 6240043206312786892, guid: 75d0f077d9c42384596f333e69b6b3ca, type: 3}
+  - {fileID: 4125861613001389371, guid: caedd5bb645247b44b13311d770d3851, type: 3}
+  - {fileID: 8440099335582425148, guid: 0e049f10931125044acd2d331e01e240, type: 3}
+  - {fileID: 6844142770294051282, guid: 934a33979a2863d4d90919df9e8ccc27, type: 3}
+  - {fileID: 269343214565110278, guid: 8cb472a89fa8a714283c7fa0ad2f85f4, type: 3}
+  - {fileID: 384670504635095329, guid: 55c7c8528a37ae64d8b914377acf83d7, type: 3}
+  - {fileID: 2367261686602730957, guid: fae54e3635c127d45b8b2aba2c6a8869, type: 3}
+  - {fileID: 8185980006433390799, guid: fb6fd4f8cec75194596b594208ca4087, type: 3}
+  - {fileID: 1708086298511065924, guid: e804eaba3c3ca974d8e4e6d36d506cb1, type: 3}
+  - {fileID: 5397939599052123384, guid: 0b23fa68e822902418a67dda0b6c3a01, type: 3}
+  - {fileID: 5560150671380955318, guid: 63cd5d5008dcadb47bd46f6c64883308, type: 3}
+  - {fileID: 1125549353082130201, guid: e3863a0b6b6611140b19a837050c7273, type: 3}
+  - {fileID: 4125861613001389371, guid: caedd5bb645247b44b13311d770d3851, type: 3}
+  - {fileID: 384670504635095329, guid: 55c7c8528a37ae64d8b914377acf83d7, type: 3}
+  openCase: 0
+  itemChance: 1
 --- !u!1 &6714796525188689224
 GameObject:
   m_ObjectHideFlags: 0
