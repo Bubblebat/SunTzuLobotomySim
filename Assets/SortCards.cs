@@ -4,6 +4,7 @@ using UnityEngine;
 public class SortCards : MonoBehaviour
 {
     [SerializeField] Transform PosList;
+    public int mixAmount = 10;
 
     int lastSize = 69420;
 
@@ -11,6 +12,7 @@ public class SortCards : MonoBehaviour
     {
         if (lastSize > transform.childCount)
         {
+            MixMF();
             SortMF();
         }
     }
@@ -35,6 +37,14 @@ public class SortCards : MonoBehaviour
                 transform.GetChild(i).GetComponent<BoxCollider2D>().enabled = false;
             }
             lastSize = transform.childCount;
+        }
+    }
+
+    void MixMF()
+    {
+        for (int i = 0; i < mixAmount; i++)
+        {
+
         }
     }
 }
