@@ -142,13 +142,13 @@ public class UnitAction : MonoBehaviour
     IEnumerator MoveActionCooldown()
     {
         canMoveAction = false;
-        yield return new WaitForSeconds(Mathf.Clamp(actionCooldown, 0.2f, 2f));
+        yield return new WaitForSeconds(Mathf.Clamp(actionCooldown, 0.05f, 2f));
         canMoveAction = true;
     }
 
     IEnumerator AttackActionCooldown()
     {
-        yield return new WaitForSeconds(Mathf.Clamp(actionCooldown - 0.1f, 0.1f, 2f - 0.1f));
+        yield return new WaitForSeconds(Mathf.Clamp(actionCooldown - 0.1f, 0.05f, 2f - 0.1f));
         canAttackAction = true;
         yield return new WaitForNextFrameUnit();
         canAttackAction = false;
