@@ -15,7 +15,7 @@ public class SortCards : MonoBehaviour
 
     private void Update()
     {
-        if (lastSize > transform.childCount)
+        if (lastSize != transform.childCount)
         {
             SortMF();
         }

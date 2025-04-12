@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      flameAOE_0: -3298219726223133605
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
