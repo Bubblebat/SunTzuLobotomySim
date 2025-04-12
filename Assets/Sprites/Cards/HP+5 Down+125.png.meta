@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a161296a15b41bb40b8da3b5ae215ddc
+guid: f2faff5058f00b7409089a7914fd5c34
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5136387691414810061
-    second: SunTzuHimself_0
+      213: 2803127836028074574
+    second: HP+5 Down+125_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,7 +139,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SunTzuHimself_0
+      name: HP+5 Down+125_0
       rect:
         serializedVersion: 2
         x: 14
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3321880cb92e7b8b0800000000000000
-      internalID: -5136387691414810061
+      spriteID: e4a767e4ae5b6e620800000000000000
+      internalID: 2803127836028074574
       vertices: []
       indices: 
       edges: []
@@ -173,8 +173,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      SunTzuHimself_0: -5136387691414810061
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
