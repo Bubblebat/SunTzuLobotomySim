@@ -36,6 +36,9 @@ public class UnitAction : MonoBehaviour
 
     [SerializeField] string[] nameList = new string[10];
 
+    [SerializeField] Sprite pose1;
+    [SerializeField] Sprite pose2;
+
     private void Start()
     {
         maxHealth *= healthMult;
@@ -135,6 +138,27 @@ public class UnitAction : MonoBehaviour
             if (futurePos.y < sceneSize.y && futurePos.y > -sceneSize.y)
             {
                 transform.position = Vector3.MoveTowards(transform.position, moveStartPos + translation, moveStep * Time.deltaTime);
+
+                SpriteRenderer rend = transform.GetComponent<SpriteRenderer>();
+
+                if (moveDir.x == -1)
+                {
+                    rend.sprite = pose1;
+                    rend.flipX = false;
+                }
+                else if (moveDir.x == 1)
+                {
+                    rend.sprite = pose1;
+                    rend.flipX = true;
+                }
+                else if (moveDir.y == 1)
+                {
+                    rend.sprite = pose2;
+                }
+                else
+                {
+                    rend.sprite = pose1;
+                }
             }
         } 
     }
@@ -142,13 +166,13 @@ public class UnitAction : MonoBehaviour
     IEnumerator MoveActionCooldown()
     {
         canMoveAction = false;
-        yield return new WaitForSeconds(Mathf.Clamp(actionCooldown, 0.2f, 2f));
+        yield return new WaitForSeconds(Mathf.Clamp(actionCooldown, 0.05f, 2f));
         canMoveAction = true;
     }
 
     IEnumerator AttackActionCooldown()
     {
-        yield return new WaitForSeconds(Mathf.Clamp(actionCooldown - 0.1f, 0.1f, 2f - 0.1f));
+        yield return new WaitForSeconds(Mathf.Clamp(actionCooldown - 0.1f, 0.05f, 2f - 0.1f));
         canAttackAction = true;
         yield return new WaitForNextFrameUnit();
         canAttackAction = false;

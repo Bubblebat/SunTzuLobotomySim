@@ -8,11 +8,15 @@ public class SortCards : MonoBehaviour
 
     int lastSize = 69420;
 
+    private void Start()
+    {
+        MixMF();
+    }
+
     private void Update()
     {
         if (lastSize > transform.childCount)
         {
-            MixMF();
             SortMF();
         }
     }
@@ -44,7 +48,7 @@ public class SortCards : MonoBehaviour
     {
         for (int i = 0; i < mixAmount; i++)
         {
-
+            transform.GetChild(i).SetSiblingIndex(Random.Range(0, PosList.childCount));
         }
     }
 }

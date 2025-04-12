@@ -181,7 +181,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_Sprite: {fileID: -3226707472510086565, guid: f12ac5afb9ec4e14bba4091718c6538c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -210,7 +210,7 @@ MonoBehaviour:
   healthMult: 1
   attackDmg: 3
   attackMult: 1
-  actionCooldown: 0.6
+  actionCooldown: 0.4
   actionMult: 1
   moveStep: 8
   mDirProb:
@@ -247,6 +247,8 @@ MonoBehaviour:
   - Xi Ying Ping
   - Emet Stork
   - Mannen i grottan
+  pose1: {fileID: -3226707472510086565, guid: f12ac5afb9ec4e14bba4091718c6538c, type: 3}
+  pose2: {fileID: -2209120513685781482, guid: fe5a1a8d2feb60d4189079757477894a, type: 3}
 --- !u!61 &-1830106176750757926
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -285,7 +287,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 2}
+    oldSize: {x: 1.875, y: 2.6666667}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
