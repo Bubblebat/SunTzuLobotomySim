@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ff65b051ef9218a41a12bdb97ed065ac
+guid: 4b7ef7ea6a2f1a34085659f0ee33fc58
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6301429047446442448
-    second: gold_0
+      213: -1843780091512380114
+    second: grassyhill2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: gold_0
+      name: grassyhill2_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 2
-        width: 29
-        height: 29
+        x: 0
+        y: 0
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 03e60a1faa3dc88a0800000000000000
-      internalID: -6301429047446442448
+      spriteID: e25a77986c39966e0800000000000000
+      internalID: -1843780091512380114
       vertices: []
       indices: 
       edges: []
@@ -173,8 +173,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      gold_0: -6301429047446442448
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

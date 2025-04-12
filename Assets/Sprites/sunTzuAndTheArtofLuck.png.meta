@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ff65b051ef9218a41a12bdb97ed065ac
+guid: afef7f68a3c334b4286375a40f561c34
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6301429047446442448
-    second: gold_0
+      213: -6634349984168852560
+    second: sunTzuAndTheArtofLuck_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: gold_0
+      name: sunTzuAndTheArtofLuck_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 2
-        width: 29
-        height: 29
+        x: 0
+        y: 0
+        width: 1600
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 03e60a1faa3dc88a0800000000000000
-      internalID: -6301429047446442448
+      spriteID: 0b34ff5f6dd0ee3a0800000000000000
+      internalID: -6634349984168852560
       vertices: []
       indices: 
       edges: []
@@ -173,8 +173,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      gold_0: -6301429047446442448
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
