@@ -27,8 +27,8 @@ Transform:
   m_GameObject: {fileID: 2226454192653832270}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: -0.1523, y: -0.1573, z: 0}
+  m_LocalScale: {x: 0.3782, y: 0.3782, z: 0.3782}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -100,10 +100,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 282bbf58b2f2ea545b9727a3c1428dda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneSize: {x: 8, y: 4}
+  health: 2
+  maxHealth: 10
+  healthMult: 1
+  attackDmg: 3
+  attackMult: 1
+  actionCooldown: 0.6
+  actionMult: 1
+  moveStep: 8
   mDirProb:
   - 25
   - 25
   - 25
   - 25
-  moveStep: 8
+  attackProb: 100
+  sceneSize: {x: 6.4, y: 4.5}
+  attackCone: {fileID: 498792293601408391, guid: 780024ebe1218c243b756f77428166ee, type: 3}
