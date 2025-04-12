@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class UnitAction : MonoBehaviour
 {
+    public string warriorName = "Bob";
     public float health = 2;
 
     [Header("Hp and Attack dmg")]
@@ -33,6 +34,8 @@ public class UnitAction : MonoBehaviour
     Vector3 moveDir = Vector3.zero;
     Vector3 moveStartPos = Vector3.zero;
 
+    [SerializeField] string[] nameList = new string[10];
+
     private void Start()
     {
         maxHealth *= healthMult;
@@ -40,6 +43,8 @@ public class UnitAction : MonoBehaviour
         actionCooldown /= actionMult;
 
         health = maxHealth;
+
+        warriorName = nameList[Random.Range(0, nameList.Length)];
     }
 
     private void Update()
