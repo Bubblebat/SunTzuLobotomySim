@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SunTzusBlessing_0: 3597540348547122691
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
