@@ -198,8 +198,8 @@ MonoBehaviour:
   attackDmg: 0
   attackMult: 0
   actionCooldown: 0
-  actionMult: 0
-  moveStep: 0
+  actionMult: 0.5
+  moveStep: 3
   mDirProb:
   - 0
   - 75

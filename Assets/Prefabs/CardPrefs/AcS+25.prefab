@@ -118,7 +118,7 @@ MonoBehaviour:
   - 0
   - 0
   - 0
-  attackProb: 0
+  attackProb: 25
 --- !u!61 &3532938593011794587
 BoxCollider2D:
   m_ObjectHideFlags: 0
