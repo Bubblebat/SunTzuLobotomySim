@@ -1,8 +1,6 @@
 using System.Collections;
 using Unity.VisualScripting;
-using UnityEditor.Timeline;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class UnitAction : MonoBehaviour
 {
@@ -187,7 +185,6 @@ public class UnitAction : MonoBehaviour
                 GameObject.FindGameObjectWithTag("PointCounter").GetComponent<ScoreStorage>().points += Random.Range(3, 6);
                 transform.GetComponent<CasOpening>().openCase = true;
                 transform.GetComponent<CasOpening>().itemChance = 0.6f;
-                Debug.Log("Bruh");
             }
             Destroy(gameObject, 0.05f);
         }

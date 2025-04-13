@@ -1,16 +1,12 @@
 using System.Collections.Generic;
-using System.Linq;
-using JetBrains.Annotations;
-using NUnit.Framework;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using static UnityEditor.PlayerSettings;
 
 public class SummonSoldier : MonoBehaviour
 {
     public GameObject soldier;
     [SerializeField] Transform cardManager;
     public List<CardScript> cScript = new List<CardScript>();
+    [SerializeField] UpgradeBaseStats newStats;
 
     void Update()
     {
@@ -34,6 +30,12 @@ public class SummonSoldier : MonoBehaviour
     {
         GameObject warrior = Instantiate(soldier, new Vector3(instancePos.x, instancePos.y), Quaternion.identity);
         UnitAction wAction = warrior.GetComponent<UnitAction>();
+
+        wAction.maxHealth = newStats.health;
+        wAction.attackDmg = newStats.damage;
+        wAction.attackProb = newStats.attackChance;
+        wAction.actionCooldown = newStats.actionCooldown;
+        wAction.moveStep = newStats.speed;
 
         for (int i = 0; i < cardManager.childCount; i++)
         {
