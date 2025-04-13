@@ -6,7 +6,7 @@ public class UIController : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("Skibidi");
     }
 
     public void ExitGame()

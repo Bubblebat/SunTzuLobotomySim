@@ -142,12 +142,12 @@ TextureImporter:
       name: ChineseSoldier_0
       rect:
         serializedVersion: 2
-        x: 8
+        x: 0
         y: 0
-        width: 45
+        width: 61
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -164,7 +164,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 257c9401754957b4dad3a7b3a70ccfbb
     internalID: 0
     vertices: []
     indices: 

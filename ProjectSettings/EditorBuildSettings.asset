@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: cdfc97d896d7ce44d82e4180ca7809bc
+  - enabled: 1
+    path: Assets/Scenes/Skibidi.unity
+    guid: 0eb92311987a8c840a7060d19c564099
+  - enabled: 0
     path: Assets/Scenes/MainScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   m_configObjects:
