@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      grassyhill2_0: -1843780091512380114
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
