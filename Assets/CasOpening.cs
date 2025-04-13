@@ -13,7 +13,7 @@ public class CasOpening : MonoBehaviour
         {
             if (Random.Range(0, 1f) <= itemChance)
             {
-                Instantiate(attributeCards[Random.Range(0, attributeCards.Length)], transform.position, Quaternion.identity, GameObject.FindGameObjectWithTag("CardManager").transform);
+                Instantiate(attributeCards[Random.Range(0, attributeCards.Length)], new Vector3(20,20,0), Quaternion.identity, GameObject.FindGameObjectWithTag("CardManager").transform);
             }
             Destroy(gameObject);
         }

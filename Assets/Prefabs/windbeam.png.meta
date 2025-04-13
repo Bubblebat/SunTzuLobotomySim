@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ff65b051ef9218a41a12bdb97ed065ac
+guid: 56b3469c47f09304d80657bdacf86460
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6301429047446442448
-    second: gold_0
+      213: 4723315959539045610
+    second: windbeam_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: gold_0
+      name: windbeam_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 2
-        width: 29
-        height: 29
+        x: 2
+        y: 4
+        width: 126
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 03e60a1faa3dc88a0800000000000000
-      internalID: -6301429047446442448
+      spriteID: ae4124a07d69c8140800000000000000
+      internalID: 4723315959539045610
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      gold_0: -6301429047446442448
+      windbeam_0: 4723315959539045610
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

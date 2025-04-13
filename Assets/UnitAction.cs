@@ -31,7 +31,7 @@ public class UnitAction : MonoBehaviour
     bool canMoveAction = true;
     bool canAttackAction = false;
 
-    Vector3 moveDir = Vector3.zero;
+    public Vector3 moveDir = Vector3.zero;
     Vector3 moveStartPos = Vector3.zero;
 
     [SerializeField] string[] nameList = new string[10];

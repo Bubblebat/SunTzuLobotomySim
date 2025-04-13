@@ -193,7 +193,7 @@ MonoBehaviour:
   flippedSprite: {fileID: -5136387691414810061, guid: a161296a15b41bb40b8da3b5ae215ddc, type: 3}
   isActive: 0
   flippedUp: 0
-  maxHealth: 0
+  maxHealth: 6
   healthMult: 0
   attackDmg: 0
   attackMult: 0

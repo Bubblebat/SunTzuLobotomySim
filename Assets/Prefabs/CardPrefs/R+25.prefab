@@ -195,7 +195,7 @@ MonoBehaviour:
   flippedUp: 0
   maxHealth: 0
   healthMult: 0
-  attackDmg: 0
+  attackDmg: 6
   attackMult: 0
   actionCooldown: 0
   actionMult: 0

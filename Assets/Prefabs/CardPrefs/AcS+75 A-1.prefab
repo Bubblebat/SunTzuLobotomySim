@@ -195,11 +195,11 @@ MonoBehaviour:
   flippedUp: 0
   maxHealth: 0
   healthMult: 0
-  attackDmg: -1
+  attackDmg: -3
   attackMult: 0
   actionCooldown: 0
-  actionMult: 0.25
-  moveStep: 0
+  actionMult: 2
+  moveStep: -2
   mDirProb:
   - 0
   - 0

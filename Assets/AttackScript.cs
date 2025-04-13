@@ -4,12 +4,25 @@ public class AttackScript : MonoBehaviour
 {
     [SerializeField] string EnemyTag;
 
-    float attackDmg = 1;
+    [SerializeField] bool needsUnitAction = true;
+    public float attackDmg = 1;
+    public float abilityTime = 1;
+
+    private void Start()
+    {
+        if (!needsUnitAction)
+        {
+            Destroy(gameObject, abilityTime);
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        attackDmg = transform.parent.GetComponent<UnitAction>().attackDmg;
-
+        if (needsUnitAction)
+        {
+            attackDmg = transform.parent.GetComponent<UnitAction>().attackDmg;
+        }
+        
         if (other.transform.gameObject.CompareTag(EnemyTag))
         {
             other.GetComponent<UnitAction>().health -= attackDmg;

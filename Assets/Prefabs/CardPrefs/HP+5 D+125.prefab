@@ -107,7 +107,7 @@ MonoBehaviour:
   isActive: 0
   flippedUp: 0
   maxHealth: 5
-  healthMult: 0
+  healthMult: 2
   attackDmg: 0
   attackMult: 0
   actionCooldown: 0
@@ -118,7 +118,7 @@ MonoBehaviour:
   - 0
   - 125
   - 0
-  attackProb: 0
+  attackProb: 10
 --- !u!61 &6572666131318697675
 BoxCollider2D:
   m_ObjectHideFlags: 0

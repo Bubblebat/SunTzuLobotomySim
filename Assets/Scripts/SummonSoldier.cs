@@ -17,10 +17,16 @@ public class SummonSoldier : MonoBehaviour
         float mPosX = Input.mousePosition.x;
         float mPosY = Input.mousePosition.y;
         Vector3 pos = Camera.main.ScreenToWorldPoint(new Vector3(mPosX, mPosY, 0));
-        pos = new Vector3(Mathf.Clamp(pos.x, -6.4f, 6.4f), pos.y, 0);
-        if (Input.GetMouseButtonDown(0) && GameObject.FindGameObjectsWithTag("U").Length < 5)
+        if (pos.x > -6.4f && pos.x < 6.4f)
         {
-            CreateWarrior(pos);
+            if (pos.y > -4.4f && pos.y < 4.4f)
+            {
+                pos = new Vector3(Mathf.Clamp(pos.x, -6.4f, 6.4f), pos.y, 0);
+                if (Input.GetMouseButtonDown(0) && GameObject.FindGameObjectsWithTag("U").Length < 5)
+                {
+                    CreateWarrior(pos);
+                }
+            }
         }
     }
 
