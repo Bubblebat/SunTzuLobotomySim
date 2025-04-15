@@ -45,4 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 6201114039046740781, guid: 12e9e19edd0641640bb85ae2fce93eb1, type: 3}
-  spawnCd: 10
+  spawnCd: 5
+  difficultyFactor: 1
+  difficultyScaling: 0.5
+  levelSettings: {fileID: 0}

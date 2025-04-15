@@ -12,9 +12,15 @@ GameObject:
   - component: {fileID: 3480602575685498770}
   - component: {fileID: 5062268400321132695}
   - component: {fileID: 2481135480779884522}
+  - component: {fileID: 5620081082452077492}
+  - component: {fileID: 3788109483494169525}
+  - component: {fileID: 9006587710379763885}
+  - component: {fileID: 2247217358205116644}
+  - component: {fileID: 7104893024364112561}
+  - component: {fileID: 4739239965156250998}
   m_Layer: 0
   m_Name: PlayerThingy
-  m_TagString: Untagged
+  m_TagString: PointCounter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49,6 +55,7 @@ MonoBehaviour:
   soldier: {fileID: 1940796511822639135, guid: ec8476ed2fbaca846bd7c661adbf616b, type: 3}
   cardManager: {fileID: 0}
   cScript: []
+  newStats: {fileID: 7104893024364112561}
 --- !u!114 &5062268400321132695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,3 +87,117 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   selectedObj: {fileID: 0}
+--- !u!114 &5620081082452077492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 614639103985601235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3accae3d2b7c38241a2c4efc59d5ccc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points: 0
+  totalPoints: 0
+--- !u!114 &3788109483494169525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 614639103985601235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a77466e286113364694345307afc0983, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inspectUnit: {fileID: 2481135480779884522}
+--- !u!114 &9006587710379763885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 614639103985601235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 259b3eec30ba23746aaa4318c3b10d0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldownThing: {fileID: 0}
+--- !u!114 &2247217358205116644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 614639103985601235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f8f9f879951a5a4a913402d463fdfea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ability:
+  - {fileID: 1211684360655172423, guid: 878640c30fa08dd4da35b77c86838040, type: 3}
+  - {fileID: 424474397632878999, guid: f873683cbc56f64489de27156c0a9c88, type: 3}
+  - {fileID: 7869724801856222968, guid: 60a564aa965732d45ad4cd44ee8f3c3a, type: 3}
+  inspectU: {fileID: 2481135480779884522}
+  abilityCooldown: 3
+  cooldownThing: {fileID: 0}
+--- !u!114 &7104893024364112561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 614639103985601235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1f8487ca40048f4983bee7c91ee9976, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+  damage: 3
+  attackChance: 25
+  actionCooldown: 0.6
+  speed: 8
+  inteligence: 0
+  score: {fileID: 5620081082452077492}
+  upgradeCost: 10
+--- !u!114 &4739239965156250998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 614639103985601235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f92245406f2d9f4283a1eb9e0b0ead2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseDifficulty:
+  - 1
+  - 2
+  - 3
+  - 5
+  - 7
+  - 10
+  - 13
+  - 17
+  - 21
+  - 25
+  difficultyScaling:
+  - 0.2
+  - 0.5
+  - 0.9
+  - 1.5
+  - 2
+  - 2.5
+  - 3.1
+  - 4
+  - 5
+  - 6
+  currentLevel: 1

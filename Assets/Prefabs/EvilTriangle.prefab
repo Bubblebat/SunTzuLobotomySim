@@ -250,6 +250,7 @@ MonoBehaviour:
   healthMult: 1
   attackDmg: 3
   attackMult: 1
+  inteligence: 0
   actionCooldown: 0.6
   actionMult: 1
   moveStep: 6
@@ -261,6 +262,7 @@ MonoBehaviour:
   attackProb: 10
   sceneSize: {x: 6.4, y: 4.5}
   attackCone: {fileID: 409162808156746367, guid: d9536889cabfbd3488d86e3ab44afca2, type: 3}
+  moveDir: {x: 0, y: 0, z: 0}
   nameList:
   - 
   - 

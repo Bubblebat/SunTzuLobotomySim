@@ -36,6 +36,7 @@ public class SummonSoldier : MonoBehaviour
         wAction.attackProb = newStats.attackChance;
         wAction.actionCooldown = newStats.actionCooldown;
         wAction.moveStep = newStats.speed;
+        wAction.inteligence = newStats.inteligence;
 
         for (int i = 0; i < cardManager.childCount; i++)
         {
@@ -54,6 +55,7 @@ public class SummonSoldier : MonoBehaviour
             wAction.actionCooldown += cScript[i].actionCooldown;
             wAction.actionMult += cScript[i].actionMult;
             wAction.moveStep += cScript[i].moveStep;
+            wAction.inteligence += cScript[i].inteligence;
             for (int j = 0; j < 4; j++)
             {
                 wAction.mDirProb[j] += cScript[i].mDirProb[j];

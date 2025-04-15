@@ -15,6 +15,7 @@ public class CardScript : MonoBehaviour
     public float healthMult = 1;
     public float attackDmg = 3;
     public float attackMult = 1;
+    public float inteligence = 0;
 
     [Header("ActionModifiers")]
     public float actionCooldown = 0.6f;

@@ -6,6 +6,8 @@ public class Timer : MonoBehaviour
 {
     [SerializeField] int roundTime;
     [SerializeField] TextMeshProUGUI text1;
+    [SerializeField] LevelSettings levelSettings;
+    [SerializeField] ScoreStorage scoreStorage;
 
     bool tickDown = true;
 
@@ -22,6 +24,26 @@ public class Timer : MonoBehaviour
             text1.text = roundTime.ToString();
             roundTime--;
             StartCoroutine(TickDown());
+        }
+
+        if (roundTime <= 0)
+        {
+            GameObject[] units = GameObject.FindGameObjectsWithTag("U");
+            for (int i = 0; i < units.Length; i++)
+            {
+                Destroy(units[i]);
+            }
+
+            if (scoreStorage.points >= 60)
+            {
+                levelSettings.currentLevel += 1;
+                roundTime += 300;
+                scoreStorage.points = 0;
+            }
+            else
+            {
+                Debug.Log("Noob");
+            }
         }
     }
 

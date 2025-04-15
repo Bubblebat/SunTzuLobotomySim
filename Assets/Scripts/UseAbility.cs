@@ -6,6 +6,7 @@ public class UseAbility : MonoBehaviour
     public GameObject[] ability = new GameObject[3];
     [SerializeField] InspectUnit inspectU;
     bool abilityOnCd = false;
+    [SerializeField] float abilityCooldown;
 
     public CountDownCooldown cooldownThing;
 
@@ -36,7 +37,7 @@ public class UseAbility : MonoBehaviour
 
             tmp.transform.rotation = Quaternion.Euler(0, 0, zRot);
 
-            cooldownThing.cooldown = 20;
+            cooldownThing.cooldown = (int)abilityCooldown;
 
             StartCoroutine(Abilitycooldown());
         }
@@ -46,7 +47,7 @@ public class UseAbility : MonoBehaviour
     IEnumerator Abilitycooldown()
     {
         abilityOnCd = true;
-        yield return new WaitForSeconds(20);
+        yield return new WaitForSeconds(abilityCooldown);
         abilityOnCd = false;
     }
 }

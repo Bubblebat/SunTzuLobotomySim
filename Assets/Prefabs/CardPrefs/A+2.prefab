@@ -78,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 101
   m_Sprite: {fileID: 5538631047249080978, guid: 21dca9028b757c94cb0b6cf0986fd2e3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -110,6 +110,7 @@ MonoBehaviour:
   healthMult: 0
   attackDmg: 8
   attackMult: 0
+  inteligence: 0
   actionCooldown: 0.3
   actionMult: 0
   moveStep: 0
@@ -240,7 +241,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 103
   m_Sprite: {fileID: 765154081351103428, guid: d4b805ae895edc54996338d8af85590c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

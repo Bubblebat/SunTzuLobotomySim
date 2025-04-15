@@ -25,7 +25,14 @@ public class DisplayStats : MonoBehaviour
     {
         UnitAction uS = inspectUnit.selectedObj.GetComponent<UnitAction>();
 
-        string garga = "Selected Unit: " + uS.warriorName + "\nMove ( Up: " + uS.mDirProb[0] + ", Right: " + uS.mDirProb[1] + ", Down: " + uS.mDirProb[2] + ", Left: " + uS.mDirProb[3] + " )\n" + "Health: " + uS.health + "\nAttackDmg: " + uS.attackDmg + "\nAttackChance: " + uS.attackProb + "\nActionCD: " + uS.actionCooldown + "\nSpeed: " + uS.moveStep;
+        string garga = "Selected Unit: " + uS.warriorName 
+            + "\nMove ( Up: " + uS.mDirProb[0] + ", Right: " + uS.mDirProb[1] + ", Down: " + uS.mDirProb[2] + ", Left: " + uS.mDirProb[3] + " )\n" 
+            + "Health: " + uS.health 
+            + "\nAttackDmg: " + uS.attackDmg 
+            + "\nAttackChance: " + uS.attackProb 
+            + "\nActionCD: " + uS.actionCooldown 
+            + "\nSpeed: " + uS.moveStep 
+            + "\nIntelligence: " + uS.inteligence;
         return garga;
     }
 }

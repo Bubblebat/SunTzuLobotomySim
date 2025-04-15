@@ -7,6 +7,9 @@ public class SpawnEnemy : MonoBehaviour
     [SerializeField] float spawnCd = 10f;
     [SerializeField] float difficultyFactor = 1.0f;
     [SerializeField] float difficultyScaling = 0.5f;
+    [SerializeField] LevelSettings levelSettings;
+
+    int lastLevel = 0;
 
     bool spawnOnCD = true;
 
@@ -14,6 +17,15 @@ public class SpawnEnemy : MonoBehaviour
     {
         if (spawnOnCD && GameObject.FindGameObjectsWithTag("E").Length < 5)
         {
+            //Fix the difficulty using levelSetting
+            if (levelSettings.currentLevel > lastLevel)
+            {
+                difficultyFactor = 0;
+                difficultyFactor = levelSettings.baseDifficulty[levelSettings.currentLevel-1];
+                difficultyScaling = levelSettings.difficultyScaling[levelSettings.currentLevel-1];
+                lastLevel = levelSettings.currentLevel;
+            }
+
             Vector3 pos = RandomPos();
             GameObject enemyInst = Instantiate(enemy, pos, Quaternion.identity);
             UnitAction unitAction = enemyInst.GetComponent<UnitAction>();
@@ -44,5 +56,6 @@ public class SpawnEnemy : MonoBehaviour
         fiendScript.actionMult += Random.Range(0, 0.1f) * difficultyFactor;
         fiendScript.moveStep += Random.Range(0, 0.5f) * difficultyFactor;
         fiendScript.attackProb += Random.Range(0, 4f) * difficultyFactor;
+        fiendScript.inteligence += Random.Range(0, 1f) * difficultyFactor * 0.5f;
     }
 }

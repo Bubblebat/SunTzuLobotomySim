@@ -163,6 +163,9 @@ MonoBehaviour:
   - {fileID: 5397939599052123384, guid: 0b23fa68e822902418a67dda0b6c3a01, type: 3}
   - {fileID: 5560150671380955318, guid: 63cd5d5008dcadb47bd46f6c64883308, type: 3}
   - {fileID: 1125549353082130201, guid: e3863a0b6b6611140b19a837050c7273, type: 3}
+  - {fileID: 6817054965014670011, guid: 3ccdd5a7eafd47749acd3a3f6bfadd0c, type: 3}
+  openCase: 0
+  itemChance: 1
 --- !u!50 &3992323235880092640
 Rigidbody2D:
   serializedVersion: 5

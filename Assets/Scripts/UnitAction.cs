@@ -7,11 +7,12 @@ public class UnitAction : MonoBehaviour
     public string warriorName = "Bob";
     public float health = 2;
 
-    [Header("Hp and Attack dmg")]
+    [Header("Normal Stats")]
     public float maxHealth = 10;
     public float healthMult = 1;
     public float attackDmg = 3;
     public float attackMult = 1;
+    public float inteligence = 0;
 
     [Header("ActionModifiers")]
     public float actionCooldown = 0.6f;
@@ -52,7 +53,16 @@ public class UnitAction : MonoBehaviour
     {
         if (canMoveAction)
         {
-            moveDir = RandomMoveAction();
+            if (inteligence >= Random.Range(0,10) && GameObject.FindGameObjectsWithTag("E").Length > 0)
+            {
+                moveDir = UsefullMoveAction();
+            }
+
+            else
+            {
+                moveDir = RandomMoveAction();
+            }
+
             moveStartPos = transform.position;
 
             StartCoroutine(MoveActionCooldown());
@@ -96,6 +106,47 @@ public class UnitAction : MonoBehaviour
         return moveDir;
     }
 
+    Vector3 UsefullMoveAction()
+    {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("E");
+        Vector2 closestEnemyPos = new Vector2(100,100);
+
+        for (int i = 0; i < enemies.Length; i++)
+        {
+            Vector3 enemyPos = enemies[i].transform.position;
+            if (closestEnemyPos.magnitude > enemyPos.magnitude)
+            {
+                closestEnemyPos = enemyPos;
+            }
+        }
+
+        if (Mathf.Abs(closestEnemyPos.x - transform.position.x) < Mathf.Abs(closestEnemyPos.y - transform.position.y))
+        {
+
+            if (transform.position.y - closestEnemyPos.y < 0)
+            {
+                moveDir = new Vector2(0, 1);
+            }
+            else
+            {
+                moveDir = new Vector2(0, -1);
+            }
+        }
+        else
+        {
+            if (transform.position.x - closestEnemyPos.x < 0)
+            {
+                moveDir = new Vector2(1, 0);
+            }
+            else
+            {
+                moveDir = new Vector2(-1, 0);
+            }
+        }
+
+        return moveDir;
+    }
+
     void RandomFightAction()
     {
         float zRot = 0;
@@ -120,7 +171,7 @@ public class UnitAction : MonoBehaviour
             zRot = -270;
         }
 
-        if (Random.Range(0, 100) < attackProb)
+        if (Random.Range(0, 100) < attackProb + inteligence)
         {
             GameObject tmp = Instantiate(attackCone, transform.position, Quaternion.Euler(new Vector3(0, 0, zRot)), transform);
             Destroy(tmp, 0.2f);
